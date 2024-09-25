@@ -1,0 +1,27 @@
+#root {
+  margin:0;
+  padding:0;
+  font-family:Arial, Helvetica, sans-serif;  
+}
+
+/* Add this to your global CSS file (e.g., index.css or App.css) */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Optional: Prevents scrolling if desired */
+}
+
+.map{
+  width:100vw;
+  height:100vh;
+  position:relative;
+}
+
+.location-icon{
+  font-size:0.5rem;
+  color:red;
+  
+}
+
