@@ -30,6 +30,7 @@ function App() {
       if (data.results && data.results.length > 0) {
         const { lat, lng } = data.results[0].geometry;
         setCenter({ lat, lng });
+        setZoom(6);
       } else {
         alert("Country not found.");
       }
