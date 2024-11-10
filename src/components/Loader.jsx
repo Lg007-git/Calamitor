@@ -5,16 +5,18 @@ const Loader = () => {
   
   // Dynamically load the night-sky script
   useEffect(() => {
+  if (!customElements.get('night-sky')) {
     const script = document.createElement('script');
     script.src = "https://unpkg.com/@h0rn0chse/night-sky/dist/bundle.min.js";
     script.async = true;
     document.body.appendChild(script);
 
-    // Clean up the script when the component is unmounted
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }
+}, []);
+
 
   return (
     <div style={{ 
