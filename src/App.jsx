@@ -8,7 +8,8 @@ function App() {
   const [eventData, setEventData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [center, setCenter] = useState({ lat: 27.56614, lng: 76.608678 });
-
+  const [zoom, setZoom] = useState(3);
+  
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true);
@@ -21,8 +22,8 @@ function App() {
   }, []);
 
   const handleSearch = async (country) => {
-    const apiKey = '28e1b3c726bf4d3086dc3d2fb93ce3ef';
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${country}&key=${apiKey}`;
+    
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${country}&key=${import.meta.env.VITE_OpenCage_API}`;
 
     try {
       const res = await fetch(url);
@@ -30,7 +31,7 @@ function App() {
       if (data.results && data.results.length > 0) {
         const { lat, lng } = data.results[0].geometry;
         setCenter({ lat, lng });
-        setZoom(6);
+        setZoom(7);
       } else {
         alert("Country not found.");
       }

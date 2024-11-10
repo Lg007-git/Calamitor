@@ -3,7 +3,7 @@ import Location_marker from './Location_marker';
 import LocationInfoBox from './LocationInfoBox';
 import { useState } from 'react';
 
-const Map = ({ eventData, center, zoom = 3 }) => {
+const Map = ({ eventData, center, zoom }) => {
   const [locationInfo, setLocationInfo] = useState(null);
 
   const markers = eventData
