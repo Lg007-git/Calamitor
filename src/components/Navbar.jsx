@@ -11,7 +11,8 @@ function Navbar({ onSearch }) {
 
   return (
     <div className="navbar" style={{ zIndex: '100', backgroundColor: 'red', display: 'flex', height: '43px', justifyContent: 'space-between', alignItems: 'center' }}>
-      <div style={{ padding: '12px 10px' }}>Calamitor</div>
+     <div style={{ padding: '12px 10px', color: 'white', fontWeight: 'bold',fontSize: '25px' }}>WildFire Detection System</div>
+
       <div className="searchbox" style={{ padding: '12px 10px' }}>
         <input
           type="text"
