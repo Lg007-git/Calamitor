@@ -8,10 +8,10 @@ const Location_marker = ({ lat, lng, onClick,categoryId }) => {
 
   switch (categoryId) {
     case 'volcanoes':
-      icon = <img src={volcanoIcon} alt="Volcano" style={{ width: '5rem', height: '5rem' }} />;
+      icon = <img src={volcanoIcon} alt="Volcano" style={{ width: '0.5rem', height: '0.5rem' }} />;
       break;
     case 'seaLakeIce':
-      icon = <img src={icebergIcon} alt="Iceberg" style={{ width: '5rem', height: '5rem' }} />;
+      icon = <img src={icebergIcon} alt="Iceberg" style={{ width: '2rem', height: '2rem' }} />;
       break;
     case 'wildfires':
     default:
