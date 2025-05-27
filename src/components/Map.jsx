@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 const Map = ({ eventData, center, zoom = 6 , calamityFilter}) => {
   const [locationInfo, setLocationInfo] = useState(null);
+  const [calamityIcon, setcalmityIcon] =useState("");
 
   const filteredEvents = eventData.filter(
     (e) => e.categories[0].id.toLowerCase() === calamityFilter.toLowerCase()
@@ -26,6 +27,7 @@ const Map = ({ eventData, center, zoom = 6 , calamityFilter}) => {
       lat={e.geometry[0].coordinates[1]}
       lng={e.geometry[0].coordinates[0]}
       onClick={() => setLocationInfo({ id: e.id, title: e.title })}
+      categoryId={e.categories[0].id}
     />
   ));
 
