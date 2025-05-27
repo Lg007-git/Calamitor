@@ -17,8 +17,8 @@ function Navbar({ onSearch, selectedCalamity, onCalamityChange }) {
 
     <div className="Calamitybox" style={{ padding: '1rem 1rem' }}>
       <select name="selectedCalamity" value={selectedCalamity} onChange={(e) => onCalamityChange(e.target.value)}>
-        <option value="WildFire">WildFire</option>
-        <option value="Sea Lake Ice">Sea Lake Ice</option>
+        <option value="WildFires">WildFire</option>
+        <option value="SeaLakeIce">Sea Lake Ice</option>
         <option value="volcanoes">volcanoes</option>
       </select>
       </div>
